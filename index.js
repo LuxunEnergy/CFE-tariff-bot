@@ -92,8 +92,6 @@ const getDACnt = async (_url, _tariff_scheme, _month) => {
             })
     }
 
-
-
     return dataArray;
 }
 
@@ -180,6 +178,7 @@ const processAllTariffSchemes = async () => {
                     break;
             }
         }
+
         return dataObject;
     } catch (error) {
         console.error('Error:', error);
