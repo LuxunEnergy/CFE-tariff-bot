@@ -18,6 +18,7 @@
   "homepage": "https://github.com/KTreviD/cfe-bot#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "selenium-webdriver": "^4.10.0"
+    "selenium-webdriver": "^4.10.0",
+    "webdriver-manager": "^12.1.9"
   }
 }
