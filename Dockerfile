@@ -4,10 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install
-
-RUN npm install selenium-webdriver
-RUN npm install chromedriver
+RUN npm ci
 
 ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
