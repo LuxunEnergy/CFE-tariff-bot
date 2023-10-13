@@ -19,4 +19,4 @@ ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
 
 # Comando para ejecutar el script Selenium
-CMD ["node", "index.js"]
+CMD ["node", "server.js"]
