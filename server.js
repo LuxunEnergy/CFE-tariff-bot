@@ -7,7 +7,7 @@ app.get('/processTariffSchemes', async (req, res) => {
     try {
         const dataObject = await processAllTariffSchemes();
         console.log(dataObject);
-        res.send(dataObject);
+        res.status(200).send(dataObject);
     } catch (error) {
         console.error('Error:', error);
         res.status(500).send('Error en el servidor');
