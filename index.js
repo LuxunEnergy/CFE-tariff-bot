@@ -3,8 +3,12 @@ const chrome = require('selenium-webdriver/chrome');
 const { TARIFF_SCHEMES, TARIFF_SCHEME_TYPES, DIVISIONS, twoDigitMonths } = require('./objects.js');
 
 const options = new chrome.Options();
+options.addArguments("--no-sandbox"); 
 options.addArguments('--headless');
 options.addArguments('--log-level=3');
+options.addArguments("--disable-gpu");
+options.addArguments('--disable-infobars');
+options.addArguments("--disable-dev-shm-usage");
 
 let fixed_charge = 0;
 let base = 0;
