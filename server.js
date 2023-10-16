@@ -1,7 +1,7 @@
 const express = require('express');
 const { processAllTariffSchemes } = require('./index.js');
 const app = express();
-const port = 7777;
+const port = process.env.PORT || 7777;
 
 app.get('/processTariffSchemes', async (req, res) => {
     try {

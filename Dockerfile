@@ -1,26 +1,17 @@
-FROM node:18.12.0
+FROM node:18.17.0-alpine
 
-RUN apt-get update && apt-get install -y \
-    libnss3 \
-    libatk1.0-0 \
-    libatk-bridge2.0-0 \
-    libcups2 \
-    libgbm1 \
-    libasound2 \
-    libpangocairo-1.0-0 \
-    libxss1 \
-    libgtk-3-0 \
-    libxshmfence1 \
-    libglu1
+RUN apk add --no-cache chromium chromium-chromedriver
+
+ENV NPM_CONFIG_UPDATE_NOTIFIER false
+ENV NPM_CONFIG_FUND false
 
 WORKDIR /app
 
-COPY . .
+COPY package*.json ./
 
 RUN npm ci
 
-ENV CHROME_BIN=/usr/bin/chromium-browser
-ENV CHROME_PATH=/usr/lib/chromium/
+COPY . .
 
 USER 1000
 
