@@ -48,7 +48,7 @@ const DIVISIONS = [
     { estado: 28, municipio: 1, region_id: 7 },
     { estado: 8, municipio: 1, region_id: 8 },
     { estado: 15, municipio: 1, region_id: 9 },
-    { estado: 25, municipio: 12, region_id: 11 },
+    { estado: 25, municipio: 1, region_id: 11 },
     { estado: 6, municipio: 1, region_id: 12 },
     { estado: 30, municipio: 1, region_id: 13 },
     { estado: 4, municipio: 1, region_id: 14 },
