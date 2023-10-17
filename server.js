@@ -3,6 +3,10 @@ const { processAllTariffSchemes } = require('./index.js');
 const app = express();
 const port = process.env.PORT || 7777;
 
+app.get('/', async (req, res) => {
+    res.send('El bot de tarifas funciona.');
+});
+
 app.get('/processTariffSchemes', async (req, res) => {
     try {
         const dataObject = await processAllTariffSchemes();
