@@ -3,7 +3,7 @@ const chrome = require('selenium-webdriver/chrome');
 const { TARIFF_SCHEMES, TARIFF_SCHEME_TYPES, DIVISIONS, twoDigitMonths } = require('./objects.js');
 
 const options = new chrome.Options();
-options.addArguments("--no-sandbox"); 
+options.addArguments("--no-sandbox");
 options.addArguments('--headless');
 options.addArguments('--log-level=3');
 options.addArguments("--disable-gpu");
@@ -26,6 +26,7 @@ const driver = new Builder()
 const actualYear = new Date().getFullYear();
 const actualMonth = new Date().getMonth() + 1;
 const period = `${actualYear}-${twoDigitMonths(actualMonth)}-01`;
+console.log("Period:", { period });
 
 const getDACnt = async (_url, _tariff_scheme, _month) => {
     const dataArray = [];
