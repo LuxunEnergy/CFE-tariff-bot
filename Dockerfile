@@ -15,4 +15,4 @@ COPY . .
 
 USER 1000
 
-CMD ["node", "server.js"]
+CMD ["node", "index.js"]
