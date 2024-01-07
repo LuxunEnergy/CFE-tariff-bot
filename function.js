@@ -25,7 +25,7 @@ const driver = new Builder()
 
 const actualYear = new Date().getFullYear();
 const actualMonth = new Date().getMonth() + 1;
-const period = `${actualYear}-${actualMonth}-01`;
+const period = `${actualYear}-${twoDigitMonths(actualMonth)}-01`;
 console.log("Period:", { period });
 
 const getDACnt = async (_url, _tariff_scheme, _month) => {
