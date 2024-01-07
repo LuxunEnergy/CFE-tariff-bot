@@ -1,7 +1,6 @@
 const cron = require("node-cron");
 const Tariff = require("./tariffModel");
 const { processAllTariffSchemes } = require("./function");
-
 console.log("CRON Jobs Started");
 
 cron.schedule("0 12 1 * *", async () => {
